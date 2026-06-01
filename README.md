@@ -36,31 +36,7 @@ devops-TP09/
     └── verificar.sh           # Script de monitoreo y logs
 
 
-🛠️ Instrucciones de Uso
-1. Requisitos previos
-Docker y K3d instalados en WSL2.
 
-Cluster creado con:
-k3d cluster create mi-cluster -p "30080:30080@loadbalancer" --agents 1
-
-2. Despliegue
-Para levantar toda la infraestructura, ejecutar desde la raíz del proyecto:
-
-cd scripts
-chmod +x deploy.sh
-./deploy.sh
-
-Nota: El ConfigMap frontend-assets debe crearse a partir de los archivos de frontend para inyectar el código HTML y la configuración de Nginx.
-
-3. Verificación
-Para comprobar que los Pods, Servicios y la conexión a la DB son correctos:
-
-./scripts/verificar.sh
-
-
-🌐 Acceso a la Aplicación
-Una vez que el script de verificación confirme que los Pods están en estado Running, se puede acceder desde el navegador de Windows a:
-👉 http://localhost:30080
 
 💡 Notas Técnicas
 Se utilizó Secrets de Kubernetes para manejar la seguridad de la base de datos remota.
