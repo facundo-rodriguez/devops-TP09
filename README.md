@@ -59,10 +59,13 @@ Para comprobar que los Pods, Servicios y la conexión a la DB son correctos:
 
 
 🌐 Acceso a la Aplicación
+
 Una vez que el script de verificación confirme que los Pods están en estado Running, se puede acceder desde el navegador de Windows a:
+
 👉 http://localhost:30080
 
 💡 Notas Técnicas
+
 Se utilizó Secrets de Kubernetes para manejar la seguridad de la base de datos remota.
 
 Se configuró un Proxy Inverso en el pod de Nginx para redirigir las peticiones /api/ al backend-service:3000 de forma interna.
